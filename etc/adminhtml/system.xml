@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="moneticopayment" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Monetico Payment</label>
+                <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                </field>
+                <field id="order_status" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>New Order Status</label>
+                    <source_model>Ilio\Monetico\Model\Config\Source\Order\Status\Pendingpayment</source_model>
+                </field>
+                <field id="bank_url" translate="label" type="text" sortOrder="17" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Bank url</label>
+                </field>
+                <field id="bank_url_test" translate="label" type="text" sortOrder="18" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Bank url TEST</label>
+                </field>
+                <field id="test" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Test Mode</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="payment_key" translate="label" type="text" sortOrder="32" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Monetico Paiement Key</label>
+                </field>
+                <field id="tpe_test" translate="label" type="text" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>TPE Test</label>
+                </field>
+                <field id="tpe_prod" translate="label" type="text" sortOrder="36" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>TPE Prod</label>
+                </field>
+                <field id="society_test" translate="label" type="text" sortOrder="38" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Code societe Test</label>
+                </field>
+                <field id="society_prod" translate="label" type="text" sortOrder="39" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Code societe Prod</label>
+                </field>
+                <field id="allowed_carrier" translate="label" type="multiselect" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Allowed Shipping Methods</label>
+                    <source_model>Magento\Shipping\Model\Config\Source\Allmethods</source_model>
+                </field>
+                <field id="allowspecific" translate="label" type="allowspecific" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Payment from Applicable Countries</label>
+                    <source_model>Magento\Payment\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <field id="specificcountry" translate="label" type="multiselect" sortOrder="41" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Payment from Specific Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="instructions" translate="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Instructions</label>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sort Order</label>
+                    <frontend_class>validate-number</frontend_class>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
